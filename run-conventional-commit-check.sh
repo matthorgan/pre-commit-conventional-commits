@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-MSG="$1"
-
-if ! grep -qE "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$" "$MSG"; then
-    cat "$MSG"
+if ! grep -qE "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$" "$1"; then
+    cat $1
     echo "
 Your commit message doesn't conform to Convential Commit Rules (https://www.conventionalcommits.org/).
 At a minimum, your commit should start with one of the below keywords:
