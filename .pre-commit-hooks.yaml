@@ -1,0 +1,6 @@
+-   id: conventional-commit-check
+    name: 'Conventional Commit Check'
+    entry: run-conventional-commit-check.sh
+    language: 'script'
+    description: "Checks that your 'git commit' matches the 'Conventional Commits' standard"
+    always_run: true
