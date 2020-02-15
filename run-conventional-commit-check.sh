@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ! grep -qE "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$" "$1"; then
+if ! grep -E "^build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test(\([a-z ]+\))?: [\w ]+$" "$1"; then
     cat $1
     echo "
 Your commit message doesn't conform to Convential Commit Rules (https://www.conventionalcommits.org/).
